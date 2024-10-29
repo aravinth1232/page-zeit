@@ -41,8 +41,8 @@
 .active{
   font-weight: 600;
 }
-/* 
-.bo{
+
+/* .bo{
   border: 2px solid black;
 } */
 
@@ -66,4 +66,36 @@ button:active{
   animation-duration: 100ms;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
+}
+
+
+@keyframes movement {
+
+  0%{
+    transform: translateY(0px);
+
+  }
+ 50%{
+  transform: translateY(100px);
+ 
+  
+ }
+ 80%{
+  transform: translateY(-100px);
+ } 
+ 100%{
+  transform: translateY(0px);
+ } 
+  
+  
+
+  
+}
+
+
+.cbg{
+  animation-name: movement;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }

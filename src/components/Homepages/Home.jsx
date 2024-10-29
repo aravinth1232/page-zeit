@@ -1,7 +1,9 @@
 import React from 'react'
 import { Parallax, Background } from 'react-parallax';
-import img2 from "../../assets/2.png"
+import img2 from "../../assets/4.png"
 import Herosection from './Herosection';
+import Herosection2 from './Herosection2';
+import Footer from '../Footer';
 
 
 const Home = () => {
@@ -17,29 +19,30 @@ const Home = () => {
     objectFit: 'cover', // Ensures the image covers the container
   }}
 >
+  
   <Herosection />
 
 </Parallax>
+
     <Parallax  
    className='h-screen '
    bgImageStyle={{
+
     
     height: '100%',
-     backgroundPosition: '0% 90%',
+    
+     backgroundPosition: '100% 100%',
     objectFit: 'cover', // Ensures the image covers the container
   }}
     bgImage={img2} 
      strength={500}>
-       <div className='flex flex-row h-[500px] '>
-        
-        {/* <img 
-        className='flex-1 w-[400px] h-[700px]  object-contain'
-        src={img1} alt="" /> */}
 
-       </div>
+        <Herosection2 />     
+
+
     </Parallax>
 
-    
+    <Footer />
     </>
   )
 }

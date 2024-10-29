@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import img1 from "../../assets/1.png"
+import img2 from "../../assets/2.png"
 import { TypeAnimation } from 'react-type-animation';
 import TextTransition, { presets } from 'react-text-transition';
  
@@ -55,7 +56,7 @@ const Heading1 = () => {
 
   return (
     <h1 
-    className=' text-2xl md:text-3xl font-medium  font-poppins text-secondary '
+    className=' text-2xl md:text-3xl font-medium  font-poppins opacity-80  text-secondary '
     >
       <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
     </h1>
@@ -91,7 +92,7 @@ const Herosection = () => {
       // else 
       const mouseX = mousePosition.x
 
-     const horizontalOffset =  (mouseX / window.innerWidth) * 1 * 20 
+     const horizontalOffset =  (mouseX / window.innerWidth) * 1 * 100 
     
     //  console.log(horizontalOffset)
       
@@ -105,10 +106,10 @@ const Herosection = () => {
    
     <>
 
-    <div className='bo h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
+    <div className='  bo h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
     <div className=' bo flex-1 px-4  md:px-8 flex flex-col gap-5 ' >
     
-    <div className='bo flex flex-col gap-10' >
+    <div className='bo flex flex-col gap-10 ' >
     <div className='flex flex-col gap-5'>
     <Heading />
     <Heading1  />
@@ -135,7 +136,7 @@ const Herosection = () => {
     {/* <h1 className="text-4xl font-bold">Coftiek</h1> */}
     <img 
      ref={imageRef}
-      className="hidden md:block w-full bo object-cover h-full"
+      className="hidden md:block w-full bo object-cover h-full transition-all duration-100 ease-in"
       src={img1} 
       alt="" 
     />
@@ -147,7 +148,14 @@ const Herosection = () => {
   
   </div>
   
+  <div className='absolute    bo w-full h-full'>
+        <img className='cbg w-full md:w-[80%] h-full opacity-20 object-fill md:object-cover' src={img2} alt="bg" />
+        
+      </div>
   </div>
+      
+     
+
   </>
   )
 }
