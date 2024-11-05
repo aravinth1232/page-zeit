@@ -106,10 +106,10 @@ const Herosection = () => {
    
     <>
 
-    <div className='  bo h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
-    <div className=' bo flex-1 px-4  md:px-8 flex flex-col gap-5 ' >
+    <div className='   h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
+    <div className='  flex-1 px-4  md:px-8 flex flex-col gap-5 ' >
     
-    <div className='bo flex flex-col gap-10 ' >
+    <div className=' flex flex-col gap-10 ' >
     <div className='flex flex-col gap-5'>
     <Heading />
     <Heading1  />
@@ -125,30 +125,30 @@ const Herosection = () => {
     </div>
     
    
-      {/* <h1 className='bo flex flex-col gap-3 items-center ' >
+      {/* <h1 className=' flex flex-col gap-3 items-center ' >
         <span className='text-4xl font-merriweather  capitalize' >Welcome to <span className='text-secondary font-bold'>Coftiek</span> </span> 
          <span className='text-3xl font-merriweather' >Where Coffee Meets Comfort</span></h1> */}
     </div>
    
 
     
-   <div className=" flex-1  relative  overflow-hidden h-full  bo ">
+   <div className=" flex-1  relative  overflow-hidden h-full   ">
     {/* <h1 className="text-4xl font-bold">Coftiek</h1> */}
     <img 
      ref={imageRef}
-      className="hidden md:block w-full bo object-cover h-full transition-all duration-100 ease-in"
+      className="hidden md:block w-full  object-cover h-full transition-all duration-100 ease-in"
       src={img1} 
       alt="" 
     />
     <img 
-      className=" md:hidden w-full bo object-cover h-full"
+      className=" md:hidden w-full  object-cover h-full"
       src={img1} 
       alt="" 
     />
   
   </div>
   
-  <div className='absolute    bo w-full h-full'>
+  <div className='absolute     w-full h-full'>
         <img className='cbg w-full md:w-[80%] h-full opacity-20 object-fill md:object-cover' src={img2} alt="bg" />
         
       </div>

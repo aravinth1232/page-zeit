@@ -1,6 +1,6 @@
 import React from 'react'
 import { Parallax, Background } from 'react-parallax';
-import img2 from "../../assets/4.png"
+import img2 from "../../assets/home2bg.png"
 import Herosection from './Herosection';
 import Herosection2 from './Herosection2';
 import Footer from '../Footer';
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
     <Parallax  
-  className="h-screen bg-primary"
+  className="min-h-screen bg-primary"
   // bgImage={img1}
   strength={500}
   bgImageStyle={{
@@ -25,14 +25,16 @@ const Home = () => {
 </Parallax>
 
     <Parallax  
-   className='h-screen '
+   className=' min-h-screen bg-secondary  '
    bgImageStyle={{
 
+    objectFit: 'cover', // Ensures the image fills the container
+    backgroundPosition: 'center top',
+    opacity:'0.2',
+    height: '120%',
+    // '@media (min-width: 768px)':
+    //  { height: '100%' }, 
     
-    height: '100%',
-    
-     backgroundPosition: '100% 100%',
-    objectFit: 'cover', // Ensures the image covers the container
   }}
     bgImage={img2} 
      strength={500}>
@@ -42,7 +44,7 @@ const Home = () => {
 
     </Parallax>
 
-    <Footer />
+    {/* <Footer />/ */}
     </>
   )
 }

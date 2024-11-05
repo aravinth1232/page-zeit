@@ -42,12 +42,13 @@
   font-weight: 600;
 }
 
-/* .bo{
-  border: 2px solid black;
-} */
-
 button{
   border-radius: 9999px 9999px 0px 9999px;
+}
+
+.bod{
+  border-radius: 9999px 9999px 0px 9999px;
+ 
 }
 
 @keyframes rev {
@@ -99,3 +100,35 @@ button:active{
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+.one{
+
+  fill: rgba(34, 27, 4,10);
+  stroke: rgba(34, 27, 4,10);
+}
+
+
+
+
+@keyframes zooming {
+
+  from {
+    scale: 1;
+  }
+  to{
+    scale :1.5;
+  }
+  
+}
+
+.zoom{
+  animation: zooming 20s ease  infinite;
+}
+
+
+
+
+
+
+
+/* .bo{  border: 2px solid black;} */
