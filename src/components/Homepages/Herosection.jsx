@@ -3,6 +3,7 @@ import img1 from "../../assets/1.png"
 import img2 from "../../assets/2.png"
 import { TypeAnimation } from 'react-type-animation';
 import TextTransition, { presets } from 'react-text-transition';
+import { Link, useNavigate } from 'react-router-dom';
  
 const Heading = () => {
 
@@ -47,16 +48,16 @@ const Heading1 = () => {
   const [index, setIndex] = useState(0);
 
 
-  const newfun = () => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      1500, // every 1.5 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }
+ 
+    
 
   useEffect(() => {
-      newfun();
+      const intervalId = setInterval(
+        () => setIndex((index) => index + 1),
+        3500, // every 1.5 seconds
+      );
+      return () => clearTimeout(intervalId);
+   
   }, []);
 
   return (
@@ -107,25 +108,31 @@ const Herosection = () => {
   }, [mousePosition]);
 
 
+  // const navigate = useNavigate()
+
   return (
    
     <>
 
-    <div className='   h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
+    <div className='   h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-4  md:pt-0  '>
     <div className='  flex-1 px-4  md:px-8 flex flex-col gap-5 ' >
     
-    <div className=' flex flex-col md:gap-20 bo' >
+    <div className=' flex flex-col gap-5 md:gap-20 bo' >
     <div className='flex flex-col gap-5 bo'>
     <Heading />
     <Heading1  />
     </div>
     <div className='self-end md:self-start'>
-    <button className="  px-6 relative inline-block py-3 font-bold text-primary lg:hover:text-secondary bg-secondary border-2 border-secondary  overflow-hidden group   ">
+    <Link 
+    role='button'
+    to="/menu"
+
+        className=" link px-6 relative inline-block py-3 font-bold text-primary lg:hover:text-secondary bg-secondary border-2 border-secondary  overflow-hidden group   ">
       <span className="relative z-10 ">Grab your Drink</span>
      
       {/* Background */}
       <span className="absolute inset-0 w-full h-full bg-primary transform scale-y-0 lg:group-hover:scale-100 transition-transform duration-300 ease-out "></span>
-    </button>
+    </Link>
     </div>
     </div>
     

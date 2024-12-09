@@ -4,6 +4,7 @@ import Home from './components/Homepages/Home'
 import Menu from './components/Menupages/Menu'
 import NavBar from './components/NavBar'
 import Contact from './components/Contactpages/Contact'
+import Footer from './components/Footer'
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       
       
       </Routes>
+   
     </Router>
    
    </>

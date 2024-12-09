@@ -26,8 +26,8 @@ const NavBar = () => {
     <>
     
     <nav 
-     className={`fixed w-full top-0 z-40 transition-all duration-300  grid grid-cols-3 place-items-center  gap-1 lg:gap-0 text-lg lg:text-2xl px-2  ${
-      isScrolled ? 'scale-95 lg:scale-90  bg-primary  shadow-lg rounded-2xl  ' : 'border-b border-secondary scale-100 bg-transparent backdrop-blur-lg'
+     className={`sticky w-full top-0 z-40 transition-all duration-300  grid grid-cols-3 place-items-center  gap-1 lg:gap-0 text-lg lg:text-2xl px-2   ${
+      isScrolled ? 'scale-95 lg:scale-90 bg-primary   shadow-lg rounded-2xl  ' : 'border-b border-secondary scale-100 bg-primary backdrop-blur-lg'
     }`} 
     >
     

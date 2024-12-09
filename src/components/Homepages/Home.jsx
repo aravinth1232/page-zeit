@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Parallax } from 'react-parallax';
 import img2 from "../../assets/home2bg.png"
 import Herosection from './Herosection';
@@ -8,6 +8,11 @@ import Footer from '../Footer';
 
 
 const Home = () => {
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Parallax  
@@ -45,8 +50,12 @@ const Home = () => {
 
     </Parallax>
 
-    {/* <Footer />/ */}
-    </>
+
+  <Parallax>
+
+    <Footer />
+  </Parallax>
+        </>
   )
 }
 

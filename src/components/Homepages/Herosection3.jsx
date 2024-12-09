@@ -41,7 +41,20 @@ const storys = [
     },
 ]
 
-
+const giftCardTypes = [
+  {
+    id: 1,
+    title: "Digital Gift Card",
+    description: "Send instantly via email or SMS.",
+    img: "", // Replace with your image path
+  },
+  {
+    id: 2,
+    title: "Physical Gift Card",
+    description: "Beautifully printed cards shipped to your address.",
+    img: "", // Replace with your image path
+  },
+];
 
 const Herosection3 = () => {
   
@@ -126,7 +139,7 @@ const Herosection3 = () => {
     
     <div className='py-4    flex flex-col border-primary gap-5 '>
       
-      <h1 className=' px-4 py-2 rounded-md text-center bg-primary text-secondary text-4xl font-cinzel opacity-70'>Top Picks</h1>
+      <h1 className=' px-4 py-2 rounded-md  bg-primary text-secondary text-4xl font-cinzel opacity-70'>Top Picks</h1>
 
     <div className=' grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-4'>
       {
@@ -154,7 +167,11 @@ const Herosection3 = () => {
       }
 
     </div>
+    
     </div>
+
+    
+
 
     </section>
       
