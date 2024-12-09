@@ -1,8 +1,9 @@
 import React from 'react'
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import img2 from "../../assets/home2bg.png"
 import Herosection from './Herosection';
 import Herosection2 from './Herosection2';
+import Herosection3 from './Herosection3';
 import Footer from '../Footer';
 
 
@@ -39,7 +40,7 @@ const Home = () => {
     bgImage={img2} 
      strength={500}>
 
-        <Herosection2 />     
+        <Herosection3 />     
 
 
     </Parallax>

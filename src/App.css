@@ -4,7 +4,9 @@
   --secondary: #221b04;
 }
 
-
+body{
+  background-color: var(--primary);
+}
 
 
 .new{
@@ -132,3 +134,8 @@ button:active{
 
 
 /* .bo{  border: 2px solid black;} */
+
+
+.tt{
+  border-radius: 9999px 9999px 0px 9999px;
+}

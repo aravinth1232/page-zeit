@@ -43,14 +43,14 @@ const NavBar = () => {
         >
           Home
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/menu"
           className={`new  ({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }`}
         >
           Menu
-        </NavLink>
+        </NavLink> */}
         </div>
 
         
@@ -61,14 +61,23 @@ const NavBar = () => {
         </div>
         
         <div className=" justify-self-center">
+
         <NavLink
+          to="/menu"
+          className={`new  ({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }`}
+        >
+          Menu
+        </NavLink>
+        {/* <NavLink
           to="/contact"
           className={`new  ({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }`}
         >
           Contact
-        </NavLink>
+        </NavLink> */}
         </div>
   </nav>
     </>

@@ -24,7 +24,7 @@ const Heading = () => {
       wrapper="span"
       cursor={true}
       repeat={Infinity}
-      className='text-3xl  md:text-5xl text-secondary font-cinzel inline-block
+      className='text-2xl  md:text-5xl text-secondary font-cinzel inline-block
        font-bold '
       // style={{
       //    fontSize: '3rem', display: 'inline-block', 
@@ -38,25 +38,30 @@ const Heading = () => {
 };
 
 const TEXTS = [ 
-  'Brewed to Perfection', 
-  'Awaken Your Senses',
-  'Served with Love', 
+  'Brewing Moments, One Cup at a Time Where Coffee Meets Community.', 
+  'From Bean to Brew, We Perfect Every Sip,  Welcome to Coftiek, Your Coffee Haven.',
+  'Awaken Your Senses, Ignite Your Spirit. Find Your Moment at Coftiek.', 
   ];
 
 const Heading1 = () => {
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
+
+  const newfun = () => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
       1500, // every 1.5 seconds
     );
     return () => clearTimeout(intervalId);
+  }
+
+  useEffect(() => {
+      newfun();
   }, []);
 
   return (
     <h1 
-    className=' text-2xl md:text-3xl font-medium  font-poppins opacity-80  text-secondary '
+    className=' text-xl md:text-xl font-medium  font-poppins opacity-80 bo w-full md:w-4/5  text-jog-800 '
     >
       <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
     </h1>
@@ -109,8 +114,8 @@ const Herosection = () => {
     <div className='   h-svg md:h-screen flex flex-col md:flex-row  justify-center md:justify-start md:items-center pt-28 md:pt-0  '>
     <div className='  flex-1 px-4  md:px-8 flex flex-col gap-5 ' >
     
-    <div className=' flex flex-col gap-10 ' >
-    <div className='flex flex-col gap-5'>
+    <div className=' flex flex-col md:gap-20 bo' >
+    <div className='flex flex-col gap-5 bo'>
     <Heading />
     <Heading1  />
     </div>

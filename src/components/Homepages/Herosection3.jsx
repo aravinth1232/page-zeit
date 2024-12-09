@@ -43,19 +43,21 @@ const storys = [
 
 
 
-
-const Herosection2 = () => {
+const Herosection3 = () => {
   
   return (
   <> 
-    <section className=' px-8  py-4 grid grid-cols-1  lg:grid-cols-2 gap-6 justify-items-center text-primary' >
-    <div 
-    className=' text-base lg:text-3xl py-4 px-4 backdrop-brightness-75 lg:hover:backdrop-brightness-110 rounded-md shadow-md font-cinzel  opacity-80  transition-all duration-200'>
-    <span className='opacity-100 first-letter:text-4xl' > At Coftiek</span>, our mission is simple: to craft the perfect coffee experience. We're passionate about serving high-quality, sustainably-sourced beans and creating a warm, welcoming environment that feels like home. Our team works hard to provide you with coffee that's rich in flavor, whether it's a classic brew or one of our seasonal specials.
-    </div>
+    <section className='px-2 lg:px-8  py-4 text-primary'>
     
+    
+    <div className='py-4 flex flex-col lg:flex-row gap-4'>
+    
+    <h1 
+    className=' text-base lg:text-3xl py-4 px-4 backdrop-brightness-75 lg:hover:backdrop-brightness-110 rounded-md shadow-md font-cinzel  opacity-80  transition-all duration-200 flex-1'>
+    <span className='opacity-100 first-letter:text-4xl' > At Coftiek</span>, our mission is simple: to craft the perfect coffee experience. We're passionate about serving high-quality, sustainably-sourced beans and creating a warm, welcoming environment that feels like home. Our team works hard to provide you with coffee that's rich in flavor, whether it's a classic brew or one of our seasonal specials.
+    </h1>
     <div
-    className='  grid grid-cols-2  content-center gap-6 font-merriweather  '
+    className=' flex-1  grid grid-cols-2  content-center gap-6 font-merriweather  '
     >
       {
       motos.map(({id,name,icon:Icon}) =>
@@ -65,7 +67,7 @@ const Herosection2 = () => {
         key={id}
         >
         <Icon size={50} className='opacity-80 text-none' />
-        <h1 className='text-base  lg:text-xl' >{name}</h1>
+        <h1 className='text-sm  lg:text-xl' >{name}</h1>
 
           
         </div>
@@ -76,15 +78,57 @@ const Herosection2 = () => {
 
 
     </div>
-    
-    
 
+
+
+
+    </div>
+
+    <div className='py-4 lg:py-4 lg:px-4  rounded-md w-full flex flex-col bo gap-5'>
     
-    <div className='pb-4 row-start-3 col-start-1 col-end-3  row-end-4   w-full flex flex-col border-primary gap-5 '>
+    <h1 className=' px-4 py-2 rounded-md bg-primary text-secondary text-2xl lg:text-4xl font-cinzel opacity-70' >The Story of Coftiek: A Passion for Coffee</h1>
+
+    <div className='flex flex-col gap-4 '>
+      {
+        storys.map((story)=>
+       
+          <div key={story.id}
+          className= {`flex  flex-col lg:flex-row  justify-start items-center gap-5 bo 
+
+            ${story.id % 2 !=0 ? "lg:flex-row" : "lg:flex-row-reverse" }
+          
+          `}
+          >
+
+            <div className='w-72 h-72  lg:w-96 lg:h-96 overflow-hidden rounded-md flex-1 bo ' >
+              <img
+              className='w-full h-full object-cover lg:hover:scale-105  bod opacity-90   lg:duration-300   cursor-pointer'
+              src={story.img} alt="coffee image" />
+            </div>
+            <div className='flex-1'>
+              <h1  
+              className='px-4 font-merriweather text-base lg:text-2xl opacity-80 text-primary'
+              >{story.description}</h1>
+            </div>
+
+
+
+
+          </div>
       
-      <h1 className='border-2 px-4 py-2 rounded-md text-center bg-primary text-secondary text-4xl font-cinzel opacity-70'>Top Picks</h1>
+        
+        )
+      }
+    </div>
 
-    <div className=' grid grid-cols-3 justify-items-center gap-4'>
+
+    </div>
+    
+    <div className='py-4    flex flex-col border-primary gap-5 '>
+      
+      <h1 className=' px-4 py-2 rounded-md text-center bg-primary text-secondary text-4xl font-cinzel opacity-70'>Top Picks</h1>
+
+    <div className=' grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-4'>
       {
 
         bests.map((best) =>
@@ -95,7 +139,7 @@ const Herosection2 = () => {
             <div className='overflow-hidden bod ' >
             <img 
             loading='lazy'
-            className='w-96 h-96 object-contain lg:hover:scale-125  lg:hover:opacity-80  lg:duration-300   cursor-pointer'
+            className= 'w-72 h-72 lg:w-96 lg:h-96 object-contain lg:hover:scale-125  lg:hover:opacity-80  lg:duration-300   cursor-pointer'
             src={best.img} alt={best.name} />
             </div>
             <h1 className='bg-secondary w-full text-center px-4 py-2 bod text-2xl border-primary font-merriweather'>{best.name}</h1>
@@ -112,55 +156,11 @@ const Herosection2 = () => {
     </div>
     </div>
 
-    
-     <div className=' py-4 px-4 row-start-2 col-start-1 col-end-3 row-end-3 rounded-md w-full flex flex-col bo gap-5'>
-    
-    <h1 className='border-2 px-4 py-2 rounded-md bg-primary text-secondary text-4xl font-cinzel opacity-70' >The Story of Coftiek: A Passion for Coffee</h1>
-
-    <div className='flex flex-col gap-4 '>
-      {
-        storys.map((story)=>
-       
-          <div key={story.id}
-          className= {`flex flex-row justify-start items-center gap-5 bo 
-
-            ${story.id % 2 !=0 ? "flex-row" : "flex-row-reverse" }
-          
-          `}
-          >
-
-            <div className='w-96 h-96 overflow-hidden rounded-md flex-1 bo ' >
-              <img
-              className='w-full h-full object-cover lg:hover:scale-105  bod opacity-90   lg:duration-300   cursor-pointer'
-              src={story.img} alt="coffee image" />
-            </div>
-            <div className='flex-1'>
-              <h1  
-              className='font-merriweather text-base lg:text-2xl opacity-80 text-primary'
-              >{story.description}</h1>
-            </div>
-
-
-
-
-          </div>
-      
-        
-        )
-      }
-    </div>
-
-
-    </div>
-
-
     </section>
-    
-
       
 
   </>
   )
 }
 
-export default Herosection2
+export default Herosection3
